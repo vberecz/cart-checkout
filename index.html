@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<title>Cart / Checkout</title>
+	<link rel="stylesheet" href="./dist/main.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+</head>
+
+<body>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<nav>
+					<a href="index.html" class="btn btn--arrow-back">
+						<!-- flaticon -->
+						<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 8.25711L2.16375 8.25712" stroke="#242423" stroke-width="2"
+							      stroke-linecap="round"/>
+							<path d="M8.25714 14.5143L2 8.25714L8.25714 2" stroke="#242423" stroke-width="2"
+							      stroke-linecap="round"/>
+						</svg>
+					</a>
+					<a href="index.html" class="logo">
+						<!-- google, az árukereső oldalról az svg valamiért csak kontrasztosan töltődött be, ennek majd utána nézek, kíváncsi vagyok a megvalósításra -->
+						<img src="./img/logo.png" alt="Árukereső" title="Árukereső"/>
+					</a>
+					<div class="nav-right-side">
+						<a href="#">
+							<!-- flaticon -->
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 12H9C7.67392 12 6.40215 12.5268 5.46447 13.4645C4.52678 14.4021 4 15.6739 4 17V21H20V17C20 15.6739 19.4732 14.4021 18.5355 13.4645C17.5979 12.5268 16.3261 12 15 12ZM18 19H6V17C6 16.2044 6.31607 15.4413 6.87868 14.8787C7.44129 14.3161 8.20435 14 9 14H15C15.7956 14 16.5587 14.3161 17.1213 14.8787C17.6839 15.4413 18 16.2044 18 17V19ZM12 11C12.7911 11 13.5645 10.7654 14.2223 10.3259C14.8801 9.88635 15.3928 9.26164 15.6955 8.53074C15.9983 7.79983 16.0775 6.99556 15.9231 6.21964C15.7688 5.44372 15.3878 4.73098 14.8284 4.17157C14.269 3.61216 13.5563 3.2312 12.7804 3.07686C12.0044 2.92252 11.2002 3.00173 10.4693 3.30448C9.73836 3.60723 9.11365 4.11992 8.67412 4.77772C8.2346 5.43552 8 6.20888 8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11ZM12 5C12.3956 5 12.7822 5.1173 13.1111 5.33706C13.44 5.55683 13.6964 5.86918 13.8478 6.23463C13.9991 6.60009 14.0387 7.00222 13.9616 7.39018C13.8844 7.77814 13.6939 8.13451 13.4142 8.41422C13.1345 8.69392 12.7781 8.8844 12.3902 8.96157C12.0022 9.03874 11.6001 8.99914 11.2346 8.84776C10.8692 8.69639 10.5568 8.44004 10.3371 8.11114C10.1173 7.78224 10 7.39556 10 7C10 6.46957 10.2107 5.96086 10.5858 5.58579C10.9609 5.21072 11.4696 5 12 5Z"
+								      fill="#111111"/>
+							</svg>
+						</a>
+						<a href="#" class="icon icon--cart">
+							<!-- flaticon -->
+							<svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M17.9902 5.63713L15.6901 15.2604C15.6503 15.4271 15.4989 15.5455 15.325 15.5455H2.67504C2.50112 15.5455 2.35011 15.4271 2.30991 15.2604L0.00982819 5.63713C-0.0160915 5.5269 0.00982819 5.41111 0.0808255 5.32241C0.151823 5.23371 0.24611 5.15689 0.360682 5.15689H4.11903L5.64153 0.261732C5.70238 0.0665201 5.91124 -0.0437044 6.10996 0.0164181C6.30793 0.0761694 6.41949 0.283258 6.35864 0.478841L4.90376 5.15689H13.0962L11.6414 0.478841C11.5809 0.283258 11.6921 0.0761694 11.89 0.0164181C12.0884 -0.0437044 12.2976 0.0665201 12.3585 0.261732L13.881 5.15689H17.6404C17.755 5.15689 17.8482 5.23371 17.9192 5.32241C17.9902 5.41111 18.0161 5.5269 17.9902 5.63713ZM0.736329 5.89914L2.97218 14.8054H15.0278L17.2648 5.89914H0.736329Z"
+								      fill="#111111"/>
+							</svg>
+							<!-- kosárban lévő termékszámok -->
+							<span class="cart cart--number">3</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="content">
+	<div class="container">
+		<div class="row content-headline">
+			<div class="col-lg-12">
+				<h1>Kosaram</h1>
+				<!-- kiírjuk hány termék van a kosárban, amint módosul a kosár tartalma úgy változik ez is -->
+				<p>3 termék</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-lg-8">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-item-img">
+								<img src="./img/iphone.png" alt="Apple iphone" title="Apple iphone">
+							</div>
+							<div class="card-item-name">
+								<h2>Apple iPhone 11 64GB Mobiltelefon</h2>
+								<p class="price">252 310 Ft</p>
+								<div class="card-functions">
+									<button class="trash">
+										<!-- "saját" ikon packből -->
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+											      d="M10 6H7V21H17V6H10ZM11 5H13V4H11V5ZM6 22V6H5V5H10V3H14V5H19V6H18V22H6ZM10 18V9H11V18H10ZM13 18V9H14V18H13Z"
+											      fill="#111111"/>
+										</svg>
+									</button>
+									<div class="qty">
+										<span class="minus" onclick="minus()">
+											<!-- "saját" ikon packből -->
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0)">
+												<mask id="path-2-inside-1" fill="white">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M17.5 8V9.5H0V8H17.5Z"/>
+												</mask>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 8V9.5H0V8H17.5Z"
+												      fill="white"/>
+												<path d="M17.5 8H18.5V7H17.5V8ZM17.5 9.5V10.5H18.5V9.5H17.5ZM0 9.5H-1V10.5H0V9.5ZM0 8V7H-1V8H0ZM16.5 8V9.5H18.5V8H16.5ZM17.5 8.5H0V10.5H17.5V8.5ZM1 9.5V8H-1V9.5H1ZM0 9H17.5V7H0V9Z"
+												      fill="#242423" fill-opacity="0.5" mask="url(#path-2-inside-1)"/>
+												</g>
+												<defs>
+												<clipPath id="clip0">
+												<rect width="17" height="18" fill="white"/>
+												</clipPath>
+												</defs>
+											</svg>
+										</span>
+										<input type="text" class="count" id="count" name="qty" value="1"/>
+										<span class="plus" onclick="plus()">
+											<!-- "saját" ikon packből -->
+											<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<mask id="path-1-inside-1" fill="white">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M9.5 0H8V8H0V9.5H8V17.5H9.5V9.5H17.5V8H9.5V0Z"/>
+												</mask>
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M9.5 0H8V8H0V9.5H8V17.5H9.5V9.5H17.5V8H9.5V0Z" fill="white"/>
+												<path d="M8 0V-1H7V0H8ZM9.5 0H10.5V-1H9.5V0ZM8 8V9H9V8H8ZM0 8V7H-1V8H0ZM0 9.5H-1V10.5H0V9.5ZM8 9.5H9V8.5H8V9.5ZM8 17.5H7V18.5H8V17.5ZM9.5 17.5V18.5H10.5V17.5H9.5ZM9.5 9.5V8.5H8.5V9.5H9.5ZM17.5 9.5V10.5H18.5V9.5H17.5ZM17.5 8H18.5V7H17.5V8ZM9.5 8H8.5V9H9.5V8ZM8 1H9.5V-1H8V1ZM9 8V0H7V8H9ZM0 9H8V7H0V9ZM1 9.5V8H-1V9.5H1ZM8 8.5H0V10.5H8V8.5ZM9 17.5V9.5H7V17.5H9ZM9.5 16.5H8V18.5H9.5V16.5ZM8.5 9.5V17.5H10.5V9.5H8.5ZM17.5 8.5H9.5V10.5H17.5V8.5ZM16.5 8V9.5H18.5V8H16.5ZM9.5 9H17.5V7H9.5V9ZM8.5 0V8H10.5V0H8.5Z"
+												      fill="#242423" mask="url(#path-1-inside-1)"/>
+											</svg>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-item-img">
+								<img src="./img/apple-watch.png" alt="Apple iphone" title="Apple iphone">
+							</div>
+							<div class="card-item-name">
+								<h2>Apple Watch Series 5 GPS 44mm</h2>
+								<p class="price">159 080 Ft</p>
+								<div class="card-functions">
+									<button class="trash">
+										<!-- "saját" ikon packből -->
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+											      d="M10 6H7V21H17V6H10ZM11 5H13V4H11V5ZM6 22V6H5V5H10V3H14V5H19V6H18V22H6ZM10 18V9H11V18H10ZM13 18V9H14V18H13Z"
+											      fill="#111111"/>
+										</svg>
+									</button>
+									<div class="qty">
+										<span class="minus">
+											<!-- "saját" ikon packből -->
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0)">
+												<mask id="path-2-inside-1" fill="white">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M17.5 8V9.5H0V8H17.5Z"/>
+												</mask>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 8V9.5H0V8H17.5Z"
+												      fill="white"/>
+												<path d="M17.5 8H18.5V7H17.5V8ZM17.5 9.5V10.5H18.5V9.5H17.5ZM0 9.5H-1V10.5H0V9.5ZM0 8V7H-1V8H0ZM16.5 8V9.5H18.5V8H16.5ZM17.5 8.5H0V10.5H17.5V8.5ZM1 9.5V8H-1V9.5H1ZM0 9H17.5V7H0V9Z"
+												      fill="#242423" fill-opacity="0.5" mask="url(#path-2-inside-1)"/>
+												</g>
+												<defs>
+												<clipPath id="clip0">
+												<rect width="17" height="18" fill="white"/>
+												</clipPath>
+												</defs>
+											</svg>
+										</span>
+										<input type="text" class="count" name="qty" value="1">
+										<span class="plus">
+											<!-- "saját" ikon packből -->
+											<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<mask id="path-1-inside-1" fill="white">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M9.5 0H8V8H0V9.5H8V17.5H9.5V9.5H17.5V8H9.5V0Z"/>
+												</mask>
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M9.5 0H8V8H0V9.5H8V17.5H9.5V9.5H17.5V8H9.5V0Z" fill="white"/>
+												<path d="M8 0V-1H7V0H8ZM9.5 0H10.5V-1H9.5V0ZM8 8V9H9V8H8ZM0 8V7H-1V8H0ZM0 9.5H-1V10.5H0V9.5ZM8 9.5H9V8.5H8V9.5ZM8 17.5H7V18.5H8V17.5ZM9.5 17.5V18.5H10.5V17.5H9.5ZM9.5 9.5V8.5H8.5V9.5H9.5ZM17.5 9.5V10.5H18.5V9.5H17.5ZM17.5 8H18.5V7H17.5V8ZM9.5 8H8.5V9H9.5V8ZM8 1H9.5V-1H8V1ZM9 8V0H7V8H9ZM0 9H8V7H0V9ZM1 9.5V8H-1V9.5H1ZM8 8.5H0V10.5H8V8.5ZM9 17.5V9.5H7V17.5H9ZM9.5 16.5H8V18.5H9.5V16.5ZM8.5 9.5V17.5H10.5V9.5H8.5ZM17.5 8.5H9.5V10.5H17.5V8.5ZM16.5 8V9.5H18.5V8H16.5ZM9.5 9H17.5V7H9.5V9ZM8.5 0V8H10.5V0H8.5Z"
+												      fill="#242423" mask="url(#path-1-inside-1)"/>
+											</svg>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-item-img">
+								<img src="./img/ipod.png" alt="Apple iphone" title="Apple iphone">
+							</div>
+							<div class="card-item-name">
+								<h2>Apple AirPods 2</h2>
+								<p class="price">47 490 Ft</p>
+								<div class="card-functions">
+									<button class="trash">
+										<!-- "saját" ikon packből -->
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+											      d="M10 6H7V21H17V6H10ZM11 5H13V4H11V5ZM6 22V6H5V5H10V3H14V5H19V6H18V22H6ZM10 18V9H11V18H10ZM13 18V9H14V18H13Z"
+											      fill="#111111"/>
+										</svg>
+									</button>
+									<div class="qty">
+										<span class="minus">
+											<!-- "saját" ikon packből -->
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0)">
+												<mask id="path-2-inside-1" fill="white">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M17.5 8V9.5H0V8H17.5Z"/>
+												</mask>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 8V9.5H0V8H17.5Z"
+												      fill="white"/>
+												<path d="M17.5 8H18.5V7H17.5V8ZM17.5 9.5V10.5H18.5V9.5H17.5ZM0 9.5H-1V10.5H0V9.5ZM0 8V7H-1V8H0ZM16.5 8V9.5H18.5V8H16.5ZM17.5 8.5H0V10.5H17.5V8.5ZM1 9.5V8H-1V9.5H1ZM0 9H17.5V7H0V9Z"
+												      fill="#242423" fill-opacity="0.5" mask="url(#path-2-inside-1)"/>
+												</g>
+												<defs>
+												<clipPath id="clip0">
+												<rect width="17" height="18" fill="white"/>
+												</clipPath>
+												</defs>
+											</svg>
+										</span>
+										<input type="text" class="count" name="qty" value="1">
+										<span class="plus">
+											<!-- "saját" ikon packből -->
+											<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<mask id="path-1-inside-1" fill="white">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M9.5 0H8V8H0V9.5H8V17.5H9.5V9.5H17.5V8H9.5V0Z"/>
+												</mask>
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M9.5 0H8V8H0V9.5H8V17.5H9.5V9.5H17.5V8H9.5V0Z" fill="white"/>
+												<path d="M8 0V-1H7V0H8ZM9.5 0H10.5V-1H9.5V0ZM8 8V9H9V8H8ZM0 8V7H-1V8H0ZM0 9.5H-1V10.5H0V9.5ZM8 9.5H9V8.5H8V9.5ZM8 17.5H7V18.5H8V17.5ZM9.5 17.5V18.5H10.5V17.5H9.5ZM9.5 9.5V8.5H8.5V9.5H9.5ZM17.5 9.5V10.5H18.5V9.5H17.5ZM17.5 8H18.5V7H17.5V8ZM9.5 8H8.5V9H9.5V8ZM8 1H9.5V-1H8V1ZM9 8V0H7V8H9ZM0 9H8V7H0V9ZM1 9.5V8H-1V9.5H1ZM8 8.5H0V10.5H8V8.5ZM9 17.5V9.5H7V17.5H9ZM9.5 16.5H8V18.5H9.5V16.5ZM8.5 9.5V17.5H10.5V9.5H8.5ZM17.5 8.5H9.5V10.5H17.5V8.5ZM16.5 8V9.5H18.5V8H16.5ZM9.5 9H17.5V7H9.5V9ZM8.5 0V8H10.5V0H8.5Z"
+												      fill="#242423" mask="url(#path-1-inside-1)"/>
+											</svg>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-lg-4">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- desktop nézetben, ha a kosár tartalma nagyobb a screen-nél sticky (ez nincs megcsinálva), tablet mobil nézetben betördelés a kosár alá-->
+						<div class="total-price-box">
+							<div class="total-price">
+								<p class="price">Összesen:</p>
+								<p class="price">458 880 Ft</p>
+							</div>
+							<p class="seller-name">
+								<strong>Eladó/Adatkezelő</strong>
+								Godimosa Kft., 8600 Siófok Sziget utca 36., 26793474-2-14 <br/>
+								<a href="#" class="btn btn--link">Adatkezelési tájékoztató</a>
+							</p>
+							<a href="atvetel.html" class="btn btn--primary">Megrendelem</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    let count = 1;
+    let countEl = document.getElementById("count");
+
+    function plus() {
+        count++;
+        countEl.value = count;
+    }
+
+    function minus() {
+        if (count > 0) {
+            count--;
+            countEl.value = count;
+        }
+    }
+</script>
+</body>
+
+</html>

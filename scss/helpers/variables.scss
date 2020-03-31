@@ -1,0 +1,60 @@
+$colors: (
+				white: (
+								primary: #ffffff
+				),
+				orange: (
+								primary: #F15922
+				),
+				gray: (
+								primary: #242423,
+								light: #bdbdbd,
+								border: #dadada,
+								input: #74726e,
+								darkBorder: #c5c5c5
+				)
+);
+$font-size: (
+				px: (
+								h1: 36px,
+								h1Mobile: 32px,
+								h2: 24px,
+								h2Mobile:16px,
+								biggerText: 18px,
+								default: 16px,
+								button: 14px,
+								input: 14px,
+								smallerText: 11px
+				)
+);
+$font-weight: (
+				default: (
+								normal: 400,
+								medium: 600,
+				)
+);
+// text align
+$textsides: (left, center, right);
+@each $tside in $textsides {
+		.#{$tside}-align {
+				text-align: $tside !important;
+		}
+}
+
+$sides: (all, top, bottom, left, right);
+
+$big-desktop-width: 87.5rem;
+
+// 365px
+$bigger-mobile-width: 22.813em;
+
+// 768px
+$small-tablet-width: 48em;
+
+// 1025px
+$big-tablet-width: 64.0625em;
+
+// 992px
+$middle-tablet-width: 62em;
+
+// 1200px
+$desktop-width: 75em;

@@ -1,0 +1,81 @@
+@include fontFace('roboto-regular', '../fonts/Roboto-Regular');
+@include fontFace('roboto-medium', '../fonts/Roboto-Medium');
+@include fontFace('roboto-bold', '../fonts/Roboto-Bold');
+
+body, html {
+		font-family: roboto-regular, sans-serif;
+		font-size: font-size(default, px);
+		background-color: color(white, primary);
+		color: color(gray, primary);
+}
+
+p, ul, ol, dl, a, input, textarea, span {
+		&.helper {
+				color: color(gray, light);
+				font-family: roboto-regular, sans-serif;
+				@include font(input, px, normal, 150%);
+		}
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+		color: color(gray, primary);
+}
+
+h1, .h1 {
+		font-family: roboto-bold, sans-serif;
+		@include font(h1Mobile, px, normal, 125%);
+		@include desktop() {
+				@include font(h1, px, normal, 150%);
+		}
+		margin: 0;
+		padding: 0;
+}
+
+h2, .h2 {
+		font-family: roboto-medium, sans-serif;
+		@include font(h2Mobile, px, normal, 150%);
+		@include desktop() {
+				@include font(h2, px, normal, 150%);
+		}
+}
+
+a {
+		&.btn--link {
+				text-decoration: underline;
+				font-weight: normal;
+				font-family: roboto-regular, sans-serif;
+		}
+}
+
+p {
+		@include font(biggerText, px, normal, 150%);
+		&.price {
+				font-family: roboto-bold, sans-serif;
+		}
+		&.seller-name {
+				font-family: roboto-regular, sans-serif;
+				@include font(smallerText, px, normal, 150%);
+		}
+}
+
+.cart--number {
+		@include font(h2, px, normal, 150%);
+		color: color(white, primary);
+		@include font(smallerText, px, normal, 100%);
+		top: -2px;
+		right: -3px;
+}
+
+input {
+		&.count {
+				@include font(biggerText, px, normal, 150%);
+		}
+}
+
+.btn {
+		font-family: roboto-bold, sans-serif;
+		&--primary {
+				color: color(white, primary);
+				@include font(button, px, normal, 100%);
+		}
+}

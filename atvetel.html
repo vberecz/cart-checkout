@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<title>Cart / Checkout</title>
+	<link rel="stylesheet" href="./dist/main.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+</head>
+
+<body>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<nav>
+					<a href="index.html" class="btn btn--arrow-back">
+						<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 8.25711L2.16375 8.25712" stroke="#242423" stroke-width="2"
+							      stroke-linecap="round"/>
+							<path d="M8.25714 14.5143L2 8.25714L8.25714 2" stroke="#242423" stroke-width="2"
+							      stroke-linecap="round"/>
+						</svg>
+					</a>
+					<a href="index.html" class="logo">
+						<img src="./img/logo.png" alt="Árukereső" title="Árukereső"/>
+					</a>
+					<div class="nav-right-side">
+						<a href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 12H9C7.67392 12 6.40215 12.5268 5.46447 13.4645C4.52678 14.4021 4 15.6739 4 17V21H20V17C20 15.6739 19.4732 14.4021 18.5355 13.4645C17.5979 12.5268 16.3261 12 15 12ZM18 19H6V17C6 16.2044 6.31607 15.4413 6.87868 14.8787C7.44129 14.3161 8.20435 14 9 14H15C15.7956 14 16.5587 14.3161 17.1213 14.8787C17.6839 15.4413 18 16.2044 18 17V19ZM12 11C12.7911 11 13.5645 10.7654 14.2223 10.3259C14.8801 9.88635 15.3928 9.26164 15.6955 8.53074C15.9983 7.79983 16.0775 6.99556 15.9231 6.21964C15.7688 5.44372 15.3878 4.73098 14.8284 4.17157C14.269 3.61216 13.5563 3.2312 12.7804 3.07686C12.0044 2.92252 11.2002 3.00173 10.4693 3.30448C9.73836 3.60723 9.11365 4.11992 8.67412 4.77772C8.2346 5.43552 8 6.20888 8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11ZM12 5C12.3956 5 12.7822 5.1173 13.1111 5.33706C13.44 5.55683 13.6964 5.86918 13.8478 6.23463C13.9991 6.60009 14.0387 7.00222 13.9616 7.39018C13.8844 7.77814 13.6939 8.13451 13.4142 8.41422C13.1345 8.69392 12.7781 8.8844 12.3902 8.96157C12.0022 9.03874 11.6001 8.99914 11.2346 8.84776C10.8692 8.69639 10.5568 8.44004 10.3371 8.11114C10.1173 7.78224 10 7.39556 10 7C10 6.46957 10.2107 5.96086 10.5858 5.58579C10.9609 5.21072 11.4696 5 12 5Z"
+								      fill="#111111"/>
+							</svg>
+						</a>
+						<a href="#" class="icon icon--cart">
+							<svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M17.9902 5.63713L15.6901 15.2604C15.6503 15.4271 15.4989 15.5455 15.325 15.5455H2.67504C2.50112 15.5455 2.35011 15.4271 2.30991 15.2604L0.00982819 5.63713C-0.0160915 5.5269 0.00982819 5.41111 0.0808255 5.32241C0.151823 5.23371 0.24611 5.15689 0.360682 5.15689H4.11903L5.64153 0.261732C5.70238 0.0665201 5.91124 -0.0437044 6.10996 0.0164181C6.30793 0.0761694 6.41949 0.283258 6.35864 0.478841L4.90376 5.15689H13.0962L11.6414 0.478841C11.5809 0.283258 11.6921 0.0761694 11.89 0.0164181C12.0884 -0.0437044 12.2976 0.0665201 12.3585 0.261732L13.881 5.15689H17.6404C17.755 5.15689 17.8482 5.23371 17.9192 5.32241C17.9902 5.41111 18.0161 5.5269 17.9902 5.63713ZM0.736329 5.89914L2.97218 14.8054H15.0278L17.2648 5.89914H0.736329Z"
+								      fill="#111111"/>
+							</svg>
+							<span class="cart cart--number">3</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="content">
+	<div class="container">
+		<div class="row content-headline">
+			<div class="col-lg-12">
+				<h1>Hogyan szeretnéd átvenni a terméket?</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-lg-8">
+				<div class="row delivery-option-box">
+					<div class="col-md-4 col-lg-4">
+						<label>
+							<input class="radio-checker" type="radio" name="radio"/>
+							<div class="card radio-box box">
+								<div class="img-container">
+									<!-- dribbble -->
+									<img src="./img/personal.png" alt="Személyesen" title="Személyesen"/>
+								</div>
+								<span>Személyesen</span>
+							</div>
+						</label>
+					</div>
+					<div id="ifYes" style="display:none;margin-top:3%;">If yes, explain:</div>
+					<div class="col-md-4 col-lg-4">
+						<label>
+							<input class="radio-checker" type="radio" name="radio"/>
+							<div class="card radio-box box">
+								<div class="img-container">
+									<!-- dribbble -->
+									<img src="./img/truck.png" alt="Házhozszállítás" title="Házhozszállítás"/>
+								</div>
+								<span>Házhozszállítás</span>
+							</div>
+						</label>
+					</div>
+					<div class="col-md-4 col-lg-4">
+						<label>
+							<input class="radio-checker" type="radio" name="radio"/>
+							<div class="card radio-box box">
+								<div class="img-container">
+									<!-- dribbble -->
+									<img src="./img/pin.png" alt="Átvevőpont" title="Átvevőpont"/>
+								</div>
+								<span>Átvevőpont</span>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- kosárban szereplő termékek és áruk -->
+			<div class="col-sm-12 col-lg-4">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="total-price-box">
+							<div class="cart-products">
+								<p>Apple iPhone 11 64GB Mobiltelefon</p>
+								<p class="price">252 310 Ft</p>
+							</div>
+							<div class="cart-products">
+								<p>Apple Watch Series 5 GPS 44mm</p>
+								<p class="price">159 080 Ft</p>
+							</div>
+							<div class="cart-products last-products">
+								<p>Apple AirPods 2</p>
+								<p class="price">47 490 Ft</p>
+							</div>
+							<div class="total-price">
+								<p class="price">Összesen:</p>
+								<p class="price">458 880 Ft</p>
+							</div>
+							<a href="szallitas.html" class="btn btn--primary">Adatok megadása</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

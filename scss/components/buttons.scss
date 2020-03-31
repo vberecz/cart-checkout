@@ -1,0 +1,35 @@
+.btn {
+		&--arrow-back {
+				@include desktop {
+						display: none;
+				}
+		}
+		&--primary {
+				display: block;
+				background-color: color(orange, primary);
+				padding: 18px 25px;
+				text-align: center;
+				margin-top: 25px;
+				@include border-radius(30px);
+				@include desktop {
+						max-width: 340px;
+				}
+				@include tablet {
+						max-width: 340px;
+				}
+		}
+}
+
+.qty {
+		.minus, .plus {
+				width: 35px;
+				height: 35px;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+				display: flex;
+				&:hover {
+						cursor: pointer;
+				}
+		}
+}

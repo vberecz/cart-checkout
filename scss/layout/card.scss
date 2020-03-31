@@ -1,0 +1,31 @@
+.card {
+		padding: 20px;
+		margin-top: 15px;
+		background-color: color(white, primary);
+		@include box-shadow();
+		@include border-radius(6px);
+		display: flex;
+		.card-item-img {
+				margin-right: 20px;
+		}
+		.card-item-name {
+				width: 100%;
+				h2 {
+						margin-bottom: 15px;
+				}
+		}
+		.card-functions {
+				margin-top: 15px;
+				display: flex;
+				justify-content: flex-end;
+				.trash {
+						border: none;
+						background-color: transparent;
+						outline: none;
+				}
+				.qty {
+						margin-left: 15px;
+						display: flex;
+				}
+		}
+}

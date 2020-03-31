@@ -1,0 +1,40 @@
+header {
+		width: 100%;
+		position: relative;
+		padding: 10px 0px;
+		nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.nav-right-side {
+						display: flex;
+						align-items: center;
+						a {
+								margin-left: 15px;
+								&.icon {
+										&--cart {
+												position: relative;
+										}
+								}
+								.cart {
+										&--number {
+												position: absolute;
+												top: 0;
+												background-color: color(orange, primary);
+												width: 12px;
+												height: 12px;
+												@include border-radius(100%);
+												text-align: center;
+										}
+								}
+						}
+				}
+		}
+}
+
+.logo {
+		img {
+				max-width: 261px;
+				max-height: 44px;
+		}
+}

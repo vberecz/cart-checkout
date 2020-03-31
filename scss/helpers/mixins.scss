@@ -1,0 +1,86 @@
+@mixin css3-prefix($property, $value) {
+		-webkit-#{$property}: #{$value};
+		-moz-#{$property}: #{$value};
+		-ms-#{$property}: #{$value};
+		-o-#{$property}: #{$value};
+		#{$property}: #{$value};
+}
+
+@mixin fontFace($family, $src, $style: normal, $weight: normal) {
+		@font-face {
+				font-family: $family;
+				src: url('#{$src}.eot');
+				src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
+				url('#{$src}.woff') format('woff'),
+				url('#{$src}.woff2') format('woff2'),
+				url('#{$src}.ttf') format('truetype');
+				font-style: $style;
+				font-weight: $weight;
+		}
+}
+
+@mixin font-size($font-size: default, $type: px) {
+		font-size: font-size($font-size, $type);
+}
+
+@mixin font($font-size:default, $fonttype: px, $font-weight:normal, $lineheight: default) {
+		font-size: font-size($font-size, $fonttype);
+		font-weight: font-weight($font-weight);
+		line-height: $lineheight;
+}
+
+@mixin padding($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
+		padding: $top $right $bottom $left;
+}
+
+@mixin border-radius($radius: 4px) {
+		@include css3-prefix('border-radius', $radius);
+}
+
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+		margin: $top $right $bottom $left;
+}
+
+@mixin margin-side($topbottom: 0, $leftright: 0) {
+		margin: $topbottom $leftright;
+}
+
+@mixin margin-all-side($allside: 0) {
+		margin: $allside;
+}
+
+@mixin transition($args) {
+		@include css3-prefix('transition', $args);
+}
+
+@mixin transform($transforms) {
+		@include css3-prefix('transform', $transforms);
+}
+
+@mixin rotate($deg) {
+		@include transform(rotate(#{$deg}));
+}
+
+@mixin translate($x, $y) {
+		@include transform(translate($x, $y));
+}
+
+@mixin box-shadow($x: 0, $y: 0px, $blur: 30px, $spread: 0, $color: rgba(10, 17, 61, 0.1), $inset: "") {
+		@if ($inset != "") {
+				@include css3-prefix('box-shadow', $inset $x $y $blur $spread $color);
+		} @else {
+				@include css3-prefix('box-shadow', $x $y $blur $spread $color);
+		}
+}
+
+@mixin desktop {
+		@media (min-width: #{$big-tablet-width}) {
+				@content;
+		}
+}
+
+@mixin tablet {
+		@media (min-width: #{$small-tablet-width}) {
+				@content;
+		}
+}
